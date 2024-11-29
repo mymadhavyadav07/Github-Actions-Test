@@ -35,12 +35,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: bandit_report.sarif
-          
-      - name: Upload Bandit report
-        uses: actions/upload-artifact@v4
-        with:
-          name: bandit-report
-          path: bandit_report.json
+   
 
       - name: Check for Bandit issues
         run: |
