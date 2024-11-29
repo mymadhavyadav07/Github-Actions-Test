@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Bandit
         run: |
-          bandit -r . -f json -o bandit_report.json || true
+          bandit -r . -f sarif -o bandit_report.sarif || true
 
       - name: Generate SARIF
         run: |
@@ -37,7 +37,7 @@ jobs:
       - name: Upload Bandit results as code scanning alerts
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: bandit_output.sarif
+          sarif_file: bandit_report.sarif
           
       - name: Upload Bandit report
         uses: actions/upload-artifact@v4
