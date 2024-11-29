@@ -10,6 +10,7 @@ on:
       
 jobs:
   bandit:
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
