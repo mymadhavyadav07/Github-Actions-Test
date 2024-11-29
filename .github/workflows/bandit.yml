@@ -32,7 +32,7 @@ jobs:
 
       - name: Generate SARIF
         run: |
-          echo bandit_report.json > bandit_output.sarif 
+          cat bandit_report.json >> bandit_output.sarif 
       
       - name: Upload Bandit results as code scanning alerts
         uses: github/codeql-action/upload-sarif@v3
