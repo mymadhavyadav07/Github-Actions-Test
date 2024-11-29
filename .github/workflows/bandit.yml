@@ -29,7 +29,7 @@ jobs:
           cat bandit_report.json
 
       - name: Upload Bandit report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: bandit-report
           path: bandit_report.json
