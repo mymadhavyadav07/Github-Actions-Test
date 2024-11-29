@@ -1,2 +1,1 @@
-bandit
 bandit_sarif_formatter
